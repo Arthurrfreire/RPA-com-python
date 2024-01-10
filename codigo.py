@@ -13,14 +13,14 @@
 
 import pyautogui
 import time
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 0.3
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
 link = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 pyautogui.write(link)
 pyautogui.press("enter")
-time.sleep(5)
+time.sleep(3)
 pyautogui.click(x=7331, y=620)
 email = "pythonimpressionador@gmail.com"
 pyautogui.write(email)
@@ -34,17 +34,18 @@ print(tabela)
 
 for linha in tabela.index:
     pyautogui.click(x=7322, y=438)
-    
-    pyautogui.write(tabela.loc[linha, "codigo"])
+    codigo = tabela.loc[linha, "codigo"]
+
+    pyautogui.write(str(codigo))
     pyautogui.press("tab")
     
-    pyautogui.write(tabela.loc[linha, "marca"])
+    pyautogui.write(str(tabela.loc[linha, "marca"]))
     pyautogui.press("tab")
 
-    pyautogui.write(tabela.loc[linha, "tipo"])
+    pyautogui.write(str(tabela.loc[linha, "tipo"]))
     pyautogui.press("tab")
 
-    pyautogui.write(tabela.loc[linha, "categoria"])
+    pyautogui.write(str(tabela.loc[linha, "categoria"]))
     pyautogui.press("tab")
 
     pyautogui.write(str(tabela.loc[linha, "preco_unitario"]))
@@ -55,7 +56,7 @@ for linha in tabela.index:
 
     obs = tabela.loc[linha, "obs"]
     if not pandas.isna(obs):
-        pyautogui.write("obs")
+        pyautogui.write(str(tabela.loc[linha, "obs"]))
     
     pyautogui.press("tab")
     pyautogui.press("enter")
