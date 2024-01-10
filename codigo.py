@@ -14,6 +14,7 @@
 import pyautogui
 import time
 pyautogui.PAUSE = 0.3
+
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
@@ -38,7 +39,7 @@ for linha in tabela.index:
 
     pyautogui.write(str(codigo))
     pyautogui.press("tab")
-    
+
     pyautogui.write(str(tabela.loc[linha, "marca"]))
     pyautogui.press("tab")
 
@@ -57,8 +58,8 @@ for linha in tabela.index:
     obs = tabela.loc[linha, "obs"]
     if not pandas.isna(obs):
         pyautogui.write(str(tabela.loc[linha, "obs"]))
-    
+
     pyautogui.press("tab")
     pyautogui.press("enter")
 
-    pyautogui.scroll(5000)
+    pyautogui.scroll(5000)      
