@@ -34,26 +34,26 @@ print(tabela)
 
 for linha in tabela.index:
     pyautogui.click(x=7322, y=438)
-    # codigo
-    pyautogui.write("MOLO000251")
+    codigo = tabela.loc[linha, "codigo"]
+    pyautogui.write(codigo)
     pyautogui.press("tab")
-    # marca
-    pyautogui.write("Logitech")
+    marca = tabela.loc[linha, "marca"]
+    pyautogui.write("marca")
     pyautogui.press("tab")
-    # tipo
-    pyautogui.write("Mouse")
+    tipo = tabela.loc[linha, "tipo"]
+    pyautogui.write("tipo")
     pyautogui.press("tab")
-    # categoria
-    pyautogui.write("1")
+    categoria = tabela.loc[linha, "categoria"]
+    pyautogui.write("categoria")
     pyautogui.press("tab")
-    # preço
-    pyautogui.write("25.95")
+    preco_unitario = tabela.loc[linha, "preco_unitario"]
+    pyautogui.write("preco_unitario")
     pyautogui.press("tab")
-    # custo
-    pyautogui.write("6.5")
+    custo = tabela.loc[linha, "custo"]
+    pyautogui.write("custo")
     pyautogui.press("tab")
-    # obs
-    pyautogui.write("")
+    obs = tabela.loc[linha, "obs"]
+    pyautogui.write("obs")
     pyautogui.press("tab")
     pyautogui.press("enter")
 
