@@ -31,28 +31,30 @@ pyautogui.click(x=7655, y=861)
 import pandas
 tabela = pandas.read_csv("produtos.csv")
 print(tabela)
-pyautogui.click(x=7322, y=438)
-# codigo
-pyautogui.write("MOLO000251")
-pyautogui.press("tab")
-# marca
-pyautogui.write("Logitech")
-pyautogui.press("tab")
-# tipo
-pyautogui.write("Mouse")
-pyautogui.press("tab")
-# categoria
-pyautogui.write("1")
-pyautogui.press("tab")
-# preço
-pyautogui.write("25.95")
-pyautogui.press("tab")
-# custo
-pyautogui.write("6.5")
-pyautogui.press("tab")
-# obs
-pyautogui.write("")
-pyautogui.press("tab")
-pyautogui.press("enter")
 
-pyautogui.scroll(5000)
+for linha in tabela.index:
+    pyautogui.click(x=7322, y=438)
+    # codigo
+    pyautogui.write("MOLO000251")
+    pyautogui.press("tab")
+    # marca
+    pyautogui.write("Logitech")
+    pyautogui.press("tab")
+    # tipo
+    pyautogui.write("Mouse")
+    pyautogui.press("tab")
+    # categoria
+    pyautogui.write("1")
+    pyautogui.press("tab")
+    # preço
+    pyautogui.write("25.95")
+    pyautogui.press("tab")
+    # custo
+    pyautogui.write("6.5")
+    pyautogui.press("tab")
+    # obs
+    pyautogui.write("")
+    pyautogui.press("tab")
+    pyautogui.press("enter")
+
+    pyautogui.scroll(5000)
