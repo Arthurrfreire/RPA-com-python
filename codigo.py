@@ -13,7 +13,7 @@
 
 import pyautogui
 import time
-pyautogui.PAUSE = 1
+pyautogui.PAUSE = 0.5
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
@@ -34,26 +34,29 @@ print(tabela)
 
 for linha in tabela.index:
     pyautogui.click(x=7322, y=438)
-    codigo = tabela.loc[linha, "codigo"]
-    pyautogui.write(codigo)
+    
+    pyautogui.write(tabela.loc[linha, "codigo"])
     pyautogui.press("tab")
-    marca = tabela.loc[linha, "marca"]
-    pyautogui.write("marca")
+    
+    pyautogui.write(tabela.loc[linha, "marca"])
     pyautogui.press("tab")
-    tipo = tabela.loc[linha, "tipo"]
-    pyautogui.write("tipo")
+
+    pyautogui.write(tabela.loc[linha, "tipo"])
     pyautogui.press("tab")
-    categoria = tabela.loc[linha, "categoria"]
-    pyautogui.write("categoria")
+
+    pyautogui.write(tabela.loc[linha, "categoria"])
     pyautogui.press("tab")
-    preco_unitario = tabela.loc[linha, "preco_unitario"]
-    pyautogui.write("preco_unitario")
+
+    pyautogui.write(str(tabela.loc[linha, "preco_unitario"]))
     pyautogui.press("tab")
-    custo = tabela.loc[linha, "custo"]
-    pyautogui.write("custo")
+
+    pyautogui.write(str(tabela.loc[linha, "custo"]))
     pyautogui.press("tab")
+
     obs = tabela.loc[linha, "obs"]
-    pyautogui.write("obs")
+    if not pandas.isna(obs):
+        pyautogui.write("obs")
+    
     pyautogui.press("tab")
     pyautogui.press("enter")
 
