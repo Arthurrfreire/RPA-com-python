@@ -3,7 +3,7 @@
         # # https://dlp.hashtagtreinamentos.com/python/intensivao/login
     # clicar -> pyautogui.click
     # escrever -> pyautogui.write
-    # apertar uma tecla -> pyautogui.press
+    # apertar uma tecla -> pyautogui.pressMouse 2   
     # apertar -> pyautogui.hotkey
     # scroll -> pyautogui.scroll
 # Passo 2 - Fazer Login
