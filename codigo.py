@@ -3,7 +3,7 @@
         # # https://dlp.hashtagtreinamentos.com/python/intensivao/login
     # clicar -> pyautogui.click
     # escrever -> pyautogui.write
-    # apertar uma tecla -> pyautogui.pressMouse 2   
+    # apertar uma tecla -> pyautogui.pressMouse 2   Hashtag
     # apertar -> pyautogui.hotkey
     # scroll -> pyautogui.scroll
 # Passo 2 - Fazer Login
@@ -31,7 +31,7 @@ pyautogui.click(x=7655, y=861)
 
 import pandas
 tabela = pandas.read_csv("produtos.csv")
-print(tabela)
+print(tabela)   
 
 for linha in tabela.index:
     pyautogui.click(x=7322, y=438)
